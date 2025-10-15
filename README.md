@@ -1,100 +1,69 @@
-🧭 Overview
+📘 Overview
 
-TaskFlow Manager is a comprehensive desktop automation system designed to streamline task management, internal communication, and meeting coordination within organizations.
-It’s built with role-based access control, ensuring that managers, supervisors, and employees each have specific permissions aligned with their responsibilities.
+Amazon Best Seller Scraper is a lightweight Python automation tool that automatically collects the latest top-selling products from Amazon’s Best Sellers page.
+It helps developers, analysts, and e-commerce enthusiasts track popular products and price trends without manual browsing.
 
-The system brings together task delegation, team chat, calendar-based planning, email notifications, and KPI reporting in a single, user-friendly interface.
+The script uses web scraping, data formatting, and scheduling to provide continuous updates on trending products — perfect for market research, competitive analysis, or data-driven decision-making.
 
 ⚙️ Key Features
-🔐 Secure Authentication
 
-Each user logs in with their own credentials.
+Automated Web Scraping:
+Uses requests and BeautifulSoup to fetch and parse Amazon’s Best Sellers page.
 
-Passwords are securely stored using bcrypt hashing.
+Top 10 Products:
+Extracts the first 10 products with their names and prices for a concise view.
 
-Supports roles: Manager → Supervisor → Employee hierarchy.
+Data Presentation:
+Displays results in a clean pandas DataFrame format directly in the console.
 
-🧾 Task Management
+Scheduled Execution:
+Utilizes the schedule library to re-run scraping every 12 hours, keeping data fresh and relevant.
 
-Create, assign, and track tasks with detailed descriptions and deadlines.
+Error-Tolerant Structure:
+Handles missing price data gracefully and continues scraping even if certain elements aren’t found.
 
-Role-based delegation:
+🧩 Technologies Used
 
-Managers assign tasks to Supervisors.
+Python 3
 
-Supervisors assign tasks to Employees.
+Libraries:
 
-Task progress can be updated via 4 status options:
-Received, In Progress, Completed, Delayed.
+requests → to send HTTP requests
 
-All changes are logged for transparency.
+BeautifulSoup4 → to parse HTML data
 
-📅 Calendar Integration
+pandas → to organize and display product data
 
-Tasks appear in a built-in calendar view.
+schedule → to automate scraping intervals
 
-Assign tasks by clicking on specific days.
+time → for controlled looping and task timing
 
-Prevents backdated task assignments for better scheduling accuracy.
+🧠 How It Works
 
-💬 Team Chat
+The script sends a GET request to Amazon’s Best Sellers page using a custom user-agent.
 
-Department-based or custom chat groups for internal communication.
+It parses the HTML structure to extract product names and prices.
 
-Allows both group and private messages.
+Results are stored in a Python list and displayed as a DataFrame.
 
-Keeps conversation history for team visibility.
-
-📞 Meeting Management
-
-Create and manage meetings with Zoom, Teams, or Google Meet links.
-
-Schedule date/time and join meetings with one click.
-
-Ideal for remote or hybrid teams.
-
-✉️ Email Notifications
-
-Automatic email alerts when a new task is assigned.
-
-Uses secure TLS connection for reliable delivery.
-
-📊 KPI & Reporting
-
-Built-in performance metrics:
-
-Total, completed, and delayed tasks.
-
-Average cycle time for task completion.
-
-Helps managers analyze productivity and workload balance.
-
-🧩 Technical Details
-
-Language: Python 3
-
-UI: Tkinter (desktop interface)
-
-Database: SQLite
-
-Security: bcrypt for password hashing, TLS for email
-
-Dependencies: bcrypt, smtplib, sqlite3, tkinter
+The scraping function runs automatically every 12 hours via the scheduling module.
 
 🚀 Use Cases
 
-Small to medium-sized businesses looking to digitize internal task flow.
+Market and competitor analysis.
 
-Teams that need a transparent, structured task and communication tool.
+Tracking trending products for e-commerce research.
 
-Organizations seeking a lightweight alternative to enterprise task management suites.
+Building datasets for machine learning or data visualization projects.
 
-💡 Future Improvements
+Educational use for learning web scraping and automation.
 
-Real-time chat via WebSocket or socket server.
+🧠 Future Enhancements
 
-Integration with Google Calendar and Microsoft Outlook.
+Export scraped data to CSV/Excel.
 
-2FA (Two-Factor Authentication) for enhanced security.
+Integrate email or Discord notifications when new bestsellers appear.
 
-Dashboard analytics and visual KPI charts.
+Support for multiple Amazon regions (e.g., .co.uk, .de, .ca).
+
+Add proxy rotation and user-agent randomization to prevent request blocking.
