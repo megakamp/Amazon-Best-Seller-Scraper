@@ -1,0 +1,61 @@
+{
+  "timestamp": "2025-08-02T12:22:32.885789",
+  "total_products_analyzed": 38,
+  "top_selling_products": [],
+  "high_potential_products": [],
+  "insights": {
+    "total_products": 38,
+    "average_score": 50.13157894736842,
+    "score_distribution": {
+      "high_potential": 0,
+      "medium_potential": 0,
+      "low_potential": 38,
+      "poor_potential": 0
+    },
+    "price_analysis": {
+      "average_price": 20.0,
+      "median_price": 20.0,
+      "min_price": 20.0,
+      "max_price": 20.0,
+      "price_ranges": {
+        "$0-$25": 38,
+        "$25-$50": 0,
+        "$50-$100": 0,
+        "$100-$250": 0,
+        "$250-$500": 0,
+        "$500+": 0
+      }
+    },
+    "category_performance": {
+      "Business & Industrial": 46.5,
+      "Clothing, Shoes & Accessories": 51.5,
+      "Collectibles": 47.5,
+      "Electronics": 49.5,
+      "Health & Beauty": 52.5,
+      "Home & Garden": 50.5,
+      "Jewelry & Watches": 48.5,
+      "Motors": 45.5,
+      "Sporting Goods": 49.5,
+      "Toys & Hobbies": 50.5,
+      "best seller": 52.5,
+      "fast shipping": 47.5,
+      "hot selling": 53.5,
+      "limited edition": 51.5,
+      "most watched": 49.5,
+      "new arrival": 49.5,
+      "popular": 51.5,
+      "top rated": 50.5,
+      "trending": 54.5
+    },
+    "top_trends": [
+      {
+        "keyword": "shop",
+        "frequency": 38
+      },
+      {
+        "keyword": "ebay",
+        "frequency": 38
+      }
+    ]
+  }
+}
